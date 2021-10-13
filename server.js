@@ -9,30 +9,28 @@ const htmlRoutes = require('./routes/htmlRoutes');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+app.use(express.static('./public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
-//Use API Routes
-// require('./routes/apiRoutes')(app);
-// require('./routes/htmlRoutes')(app);
 
 
 
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-  });
 
-  app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
-  });
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.html'));
+//   });
 
-//Sets index as default
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-  });
+//   app.get('/notes', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/notes.html'));
+//   });
 
-  app.use(express.static('./public'));
+// //Sets index as default
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.html'));
+//   });
+
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
