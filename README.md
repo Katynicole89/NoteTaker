@@ -2,12 +2,21 @@
 
 Write and save notes using Express.js
 
+### Deployed to Heroku: https://dry-springs-34285.herokuapp.com/
 ### Github: https://github.com/Katynicole89/NoteTaker
 
+
+![NoteTaker](screenshot.jpg)
+
 ## User Story
-AS A small business owner
-I WANT to be able to write and save notes
+```
+AS A user, I want to be able to write and save notes
+
+I WANT to be able to delete notes I've written before
+
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
+```
+
 
 ## Acceptance Criteria
 GIVEN a note-taking application
